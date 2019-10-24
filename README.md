@@ -4,10 +4,10 @@ ZFS monitoring script with logging and email notifications.
 # Intro
 A monitoring tool for ZFS pool health with logging and email alerts - checks `zpool status` and pool used capacity.
 
-This script relies on the `ssmtp` package to function properly. In addition, the default configuration for this script requires its connection to a Gmail account in order to send emails.
+This script relies on the `msmtp` package to function properly. In addition, the default configuration for this script requires its connection to a Gmail account in order to send emails.
 
 # Setup
-To get started (and after the aformentioned prerequisites have been installed/updated), the `ssmtp.conf` file should be edited to reflect the credentials to the Gmail account to be used for sending email reports. After editing the file, save and close it and move it to `/etc/ssmtp`.
+To get started (and after the aformentioned prerequisites have been installed/updated), the `msmtprc` file should be edited to reflect the credentials to the Gmail account to be used for sending email reports. After editing the file, save and close it and move it to `/etc/msmtprc`.
 
 Next, the `check.sh` file should be opened for editing. The default configurable options are:
 
