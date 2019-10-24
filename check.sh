@@ -99,7 +99,7 @@ if [[ "$error" = "true" && "$linuxtime" > "$notetime" ]]; then
     perl -pi -e 's#%%emailmessage%%#'"`cat tmp/log.sending`"'#' $mailsend
 
     ## Send the notification email
-    ssmtp $emailtoaddr < $mailsend
+    cat $mailsend | msmtp -a gmail $emailtoaddr
 
     ## Clean up temp files
     rm -r tmp
